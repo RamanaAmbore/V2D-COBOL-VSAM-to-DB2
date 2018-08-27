@@ -1,0 +1,22 @@
+000001      TRUE                                                
+000002         WHEN NORMAL                                              
+000003              MOVE ABCD-RULE TO FILTER-RULE                       
+000003              MOVE ABCD-RULE TO FILTER-RULE       
+                      
+000004              EXEC CICS READ                                    
+000005                   DATASET('ABCD-FILE'                            
+000005*                   DATASET('ABCD-FILE')                                
+000005                                      )                           
+000006                   RIDFLD(ABCD-KEY)                      
+000007                   KEYLENGTH(9)                                   
+000008                   RESP(CICS-RESP)                               
+000009              END-EXEC        .                                   
+000010              EVALUATE TRUE                                       
+000011                   WHEN NORMAL                                           
+000012                        CONTINUE                                  
+000013                   WHEN OTHER                                     
+000014                        SET ABCD-SW TO TRUE                       
+000015                                                       
+000016         WHEN OTHER                                               
+000017              CONTINUE                                            
+000018     "."END-EVALUATE

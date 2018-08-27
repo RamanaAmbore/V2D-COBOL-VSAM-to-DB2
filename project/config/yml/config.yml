@@ -1,0 +1,15 @@
+ #Created on Wed Feb 21 21:03:38 2018
+#@author: Ramana Rao Ambore
+#Description: 
+
+copy: cobol\macros
+cics: cobol\cics
+batch: cobol\batch
+cics-out: cobol\cics\converted
+python: python
+regex: config\regex
+config: config\yml\config.yml
+xref: config\xref
+template: config\template
+format: config\format
+variable: config\variables
